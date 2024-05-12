@@ -37,6 +37,7 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
   PageController boardingController = PageController();
   bool isLast = false;
   bool isFirst = true;
+  IconData btn2Icon = Icons.arrow_forward_ios;
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +52,13 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
               onPageChanged: (index) {
                 if(index == boardingList.length - 1){
                   isLast = true;
+                  setState(() {
+                    btn2Icon = Icons.check;
+                  });
                 } else{
+                  setState(() {
+                    btn2Icon = Icons.arrow_forward_ios;
+                  });
                   isLast = false;
                 }
                 if(index == 0){
@@ -70,20 +77,8 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
             height: 40,
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SmoothPageIndicator(
-                controller: boardingController,
-                count: boardingList.length,
-                effect: const ExpandingDotsEffect(
-                  dotColor: Colors.grey,
-                  activeDotColor: Colors.orange,
-                  dotHeight: 10,
-                  dotWidth: 10,
-                  expansionFactor: 3,
-                  spacing: 5,
-                ),
-              ),
-              const Spacer(),
               FloatingActionButton(
                 heroTag: 'btn1',
                 backgroundColor: Colors.orange,
@@ -102,8 +97,17 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(
-                width: 16,
+              SmoothPageIndicator(
+                controller: boardingController,
+                count: boardingList.length,
+                effect: const ExpandingDotsEffect(
+                  dotColor: Colors.grey,
+                  activeDotColor: Colors.orange,
+                  dotHeight: 10,
+                  dotWidth: 10,
+                  expansionFactor: 3,
+                  spacing: 5,
+                ),
               ),
               FloatingActionButton(
                 heroTag: 'btn2',
@@ -127,8 +131,8 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                     });
                   }
                 },
-                child: const Icon(
-                  Icons.arrow_forward_ios,
+                child: Icon(
+                  btn2Icon,
                   color: Colors.white,
                 ),
               ),
