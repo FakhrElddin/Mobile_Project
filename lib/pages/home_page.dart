@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         elevation: 0,
       ),
       body: DoubleBackToCloseApp(

@@ -64,7 +64,7 @@ class _NewsPageState extends State<NewsPage> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         elevation: 0,
       ),
       body: SafeArea(
