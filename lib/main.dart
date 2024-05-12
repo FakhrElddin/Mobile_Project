@@ -23,7 +23,7 @@ class NewsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnBoardingPage(),
+      home: onBoarding ? HomePage() : OnBoardingPage(),
     );
   }
 }

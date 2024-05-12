@@ -33,8 +33,11 @@ class NewsListView extends StatelessWidget {
                 duration: const Duration(milliseconds: 3000),
                 curve: Curves.fastLinearToSlowEaseIn,
                 flipAxis: FlipAxis.y,
-                child: NewsTile(
-                  articleModel: articles[index],
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 20.0),
+                  child: NewsTile(
+                    articleModel: articles[index],
+                  ),
                 ),
               ),
             ),
