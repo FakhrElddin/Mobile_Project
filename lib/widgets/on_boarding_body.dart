@@ -18,17 +18,17 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
 
   final List<BoardingModel> boardingList = const [
     BoardingModel(
-      image: 'assets/onboarding_1.svg',
+      image: 'assets/animation1.json',
       title: 'ABOUT APP',
       body: 'The App is for all important or top headlines news in USA',
     ),
     BoardingModel(
-      image: 'assets/onboarding_2.svg',
+      image: 'assets/animation2.json',
       title: 'WATCH NEWS',
       body: 'Explore a virtual haven for news with our app—browse anytime, anywhere',
     ),
     BoardingModel(
-      image: 'assets/onboarding_3.svg',
+      image: 'assets/animation3.json',
       title: 'BE FIRST TO KNOW',
       body: 'We will keep you informed of positive news and events',
     ),
@@ -42,7 +42,7 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.fromLTRB(30, 30, 30, 50),
       child: Column(
         children: [
           Expanded(
@@ -92,11 +92,15 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                     );
                   }
                 },
-                child: const Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.white,
+                child: SizedBox( // icon was not centered, so I wrapped it in a SizedBox
+                  width: 15,
+                  child: const Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.white,
+                  ),
                 ),
               ),
+              const Spacer(),
               SmoothPageIndicator(
                 controller: boardingController,
                 count: boardingList.length,
@@ -109,6 +113,7 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                   spacing: 5,
                 ),
               ),
+              const Spacer(),
               FloatingActionButton(
                 heroTag: 'btn2',
                 backgroundColor: Colors.orange,
@@ -138,9 +143,6 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
               ),
             ],
           ),
-          // SizedBox(
-          //   height: 32,
-          // ),
         ],
       ),
     );

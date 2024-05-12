@@ -28,6 +28,9 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  flutter:
+    sdk: flutter
+
   dio: ^5.3.2
   cached_network_image: ^3.3.0
   webview_flutter: ^4.4.1
@@ -37,8 +40,7 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   double_back_to_close_app: ^2.1.0
   list_wheel_scroll_view_nls: ^0.0.3
-  flutter:
-    sdk: flutter
+  lottie: any
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mobile_project/models/boarding_model.dart';
+import 'package:lottie/lottie.dart';
+
 
 
 class BoardingItem extends StatelessWidget {
@@ -14,7 +15,7 @@ class BoardingItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(
-            child: Center(child: SvgPicture.asset(boardingModel.image,)),
+            child: Center(child: Lottie.asset(boardingModel.image)),
         ),
         const SizedBox(
           height: 32,

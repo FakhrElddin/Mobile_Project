@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:list_wheel_scroll_view_nls/list_wheel_scroll_view_nls.dart';
 import 'package:mobile_project/models/category_model.dart';
 import 'package:mobile_project/widgets/category_card.dart';
@@ -32,7 +31,6 @@ class CategoriesListView extends StatelessWidget {
             ),
         ],
       ),
-
     );
   }
 }
